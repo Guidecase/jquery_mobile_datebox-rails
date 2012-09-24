@@ -33,13 +33,15 @@ You must also add the following to your stylesheet manifest:
 
 ### Use
 
-Standalone html control:
+The datebox input behaves like a glorified text_field with an additional (optional) hash parameter of DateBox control options. Render the datebox in Rails views as follows.
 
-    <%= datebox_tag 'event', 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
+As standalone html:
+
+    <%= datebox_tag 'event', 'starts_at', 'cal', {:calUsePickers => true, :calNoHeader => true}, {:class => 'input required'}} %>
 
 With a form builder:
 
-    <%= f.datebox 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
+    <%= f.datebox 'starts_at', 'cal', {:calUsePickers => true, :calNoHeader => true}, {:class => 'input required'}} %>
 
 ### License
 

@@ -1,4 +1,7 @@
 require 'rails'
+require 'jquery_mobile_datebox-rails/action_view/helpers/tags/datebox_field'
+require 'jquery_mobile_datebox-rails/action_view/helpers/form_helper'
+require 'jquery_mobile_datebox-rails/action_view/helpers/datebox_helper'
 require 'jquery_mobile_datebox-rails/railtie' 
 
 module Guidecase

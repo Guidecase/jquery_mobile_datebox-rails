@@ -27,6 +27,10 @@ Different datebox modes can be used by including alternative scripts. the follow
     //= require jqm-datebox.mode.flipbox
     //= require jqm-datebox.mode.slidebox
 
+Include the scripts in your layout:
+
+    <%= javascript_include_tag "jqm-datebox", "jqm-datebox.mode.calbox", "jquery.mobile.datebox.i18n.en_US.utf8" %>
+
 You must also add the following to your stylesheet manifest:
 
     //= require jqm-datebox
@@ -37,11 +41,11 @@ The datebox input behaves like a glorified text_field with an additional (option
 
 As standalone html:
 
-    <%= datebox_tag 'event', 'starts_at', 'cal', {:calUsePickers => true, :calNoHeader => true}, {:class => 'input required'}} %>
+    <%= datebox_tag 'event', 'starts_at', 'calbox', {:calUsePickers => true, :calNoHeader => true}, {:class => 'input required'}} %>
 
 With a form builder:
 
-    <%= f.datebox 'starts_at', 'cal', {:calUsePickers => true, :calNoHeader => true}, {:class => 'input required'}} %>
+    <%= f.datebox 'starts_at', 'calbox', {:calUsePickers => true, :calNoHeader => true}, {:class => 'input required'}} %>
 
 ### License
 

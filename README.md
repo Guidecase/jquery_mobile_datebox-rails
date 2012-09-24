@@ -35,11 +35,11 @@ You must also add the following to your stylesheet manifest:
 
 Standalone html control:
 
-    <%= datebox_field 'event', 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
+    <%= datebox_tag 'event', 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
 
 With a form builder:
 
-    <%= f.datebox_field 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
+    <%= f.datebox 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
 
 ### License
 

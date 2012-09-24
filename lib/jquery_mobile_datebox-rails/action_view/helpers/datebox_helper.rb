@@ -1,8 +1,13 @@
 module ActionView
   module Helpers
   	module DateboxHelper
-      def datebox_field(object_name, method, mode, options = {}, html_options = {})
-        Tags::DateboxField.new(object_name, method, self, options, html_options).render
+      extend ActiveSupport::Concern
+    
+      def datebox_tag(name, value, mode, cal_options = {}, options = {})
+        options['data'] ||= {}
+        options['data']['options'] = cal_options.to_json
+        options['data']['role'] = 'datebox'
+        text_field_tag name, value, options
       end    
   	end
   end

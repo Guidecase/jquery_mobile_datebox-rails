@@ -1,9 +1,9 @@
 Jquery Mobile DateBox Rails
 ===========================
 
-This gem provides the jQuery Mobile DateBox plugin assets for Rails 3.1 and greater. The files will be added to the asset pipeline and available for you to use. It follow the spirit of other JQ Rails plugins in exposing a vendored asset directory and a few view helpers for the DOM API.
+This gem provides the jQuery Mobile DateBox plugin assets for Rails 3.1 and greater. The files will be added to the asset pipeline and available for you to use. It follows the lead of other jQuery gems in exposing a vendored asset directory and a few view helpers for the DOM API.
 
-Full details about JQM DateBox can be found on the DateBox website itself:
+Full details about JQM DateBox (and the HTML options API docs) can be found on the DateBox website itself:
 
 http://dev.jtsage.com/jQM-DateBox/
 
@@ -31,6 +31,20 @@ You must also add the following to your stylesheet manifest:
 
     //= require jqm-datebox
 
+### Use
+
+Standalone html control:
+
+    <%= datebox_field 'event', 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
+
+With a form builder:
+
+    <%= f.datebox_field 'starts_at', 'cal', :data => {:options => {:calUsePickers => true, :calNoHeader => true}} %>
+
 ### License
 
 The Jquery Mobile DateBox Rails Gem is published under the New BSD license.
+
+Originally developed for Earlydoc health management apps: 
+
+http://www.earlydoc.com

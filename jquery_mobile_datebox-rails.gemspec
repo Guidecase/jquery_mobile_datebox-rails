@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name         = "jquery_mobile_datebox-rails"
-  s.version      = '0.9.0'
+  s.version      = '0.9.1'
   s.platform     = Gem::Platform::RUBY  
   s.description  = "jQuery Mobile Datebox"
   s.summary      = "This gem provides the jQuery Mobile DateBox plugin assets to Rails apps."
